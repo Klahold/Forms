@@ -1,73 +1,63 @@
 function validarFormulario() {
 
-    //pegar os dados//
-
-    const nome = document.getElementById('nome').value.trim();
-
-    const email = document.getElementById('email').value.trim();
-
-    const idade = parseInt(document.getElementById('idade_maquinista').value, 10);
-
-    const genero = document.getElementById('genero').value.trim();
-
-    const comida = document.getElementById('comida').value.trim();
-
-    const corOlho = document.getElementById('corOlho').value.trim();
-
-    const corCabelo = document.getElementById('corCabelo').value.trim();
-
-    const pe = document.getElementById('pe').value.trim();
-
-    const tamanho = document.getElementById('tamanho').value.trim();
-
-    const nomePai = document.getElementById('nomePai').value.trim();
-
-    const nomeMae = document.getElementById('nomeMae').value.trim();
-
-    const irmaos = document.getElementById('irmaos').value.trim();
-
-    const numero = document.getElementById('numero').value.trim();
-
-    const corPele = document.getElementById('corPele').value.trim();
-
-    const cor = document.getElementById('cor').value.trim();
-
-    const geladeira = document.getElementById('geladeira').value.trim();
-
-    const aniversario = document.getElementById('aniversario').value.trim();
-
-    const time = document.getElementById('time').value.trim();
-
-    const materia = document.getElementById('materia').value.trim();
-
-    const nasceu = document.getElementById('nasceu').value.trim();
-
-    const animal = document.getElementById('animal').value.trim();
-
-    const academia = document.getElementById('academia').value.trim();
-
-    const problema = document.getElementById('problema').value.trim();
-
-    const checkbox = document.getElementById('checkbox').value.trim();
-
-    const som = document.getElementById('som').value.trim();
-
-    const tel = document.getElementById('tel').value.trim();
-
-    const senha = document.getElementById('senha').value.trim();
-
-    const carro = document.getElementById('carro').value.trim();
-
-    const amigos = document.getElementById('amigos').value.trim();
-
-    const comer = document.getElementById('comer').value.trim();
-
-
-    //processamento//
+    const nome = document.getElementById('nome').value;
     
+    const email = document.getElementById('email').value;
 
-    //developer//
+    const idade = document.getElementById('idade').value;
 
-    alert('formulario enviado com sucesso')
+    const genero = document.getElementById('genero').value;
+
+    const comida = document.getElementById('comida').value;
+
+    const corOlho = document.getElementById('corOlho').value;
+
+    const corCabelo = document.getElementById('corCabelo').value;
+
+    const pe = document.getElementById('pe').value;
+
+    const tamanho = document.getElementById('tamanho').value;
+
+    const nomePai = document.getElementById('nomePai').value;
+
+    const nomeMae = document.getElementById('nomeMae').value;
+
+    const numero = document.getElementById('numero').value;
+
+    const geladeira = document.getElementById('geladeira').value;
+
+    const aniversario = document.getElementById('aniversario').value;
+
+    const time = document.getElementById('time').value;
+
+    const materia = document.getElementById('materia').value;
+
+    const nasceu = document.getElementById('nasceu').value;
+
+    const animal = document.getElementById('animal').value;
+
+    const tel = document.getElementById('tel').value;
+
+    const senha = document.getElementById('senha').value;
+
+    const carro = document.getElementById('carro').value;
+
+    if (!nome || !email || !idade || !genero || !comida || !tamanho || !nomePai || !nomeMae || !tel || !senha) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Por favor, insira um email válido.");
+        return false;
+    }
+
+    if (idade <= 0) {
+        alert("Por favor, insira uma idade válida.");
+        return false;
+    }
+
+    alert("Formulário enviado com sucesso!");
 
 }
