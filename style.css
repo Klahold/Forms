@@ -1,5 +1,8 @@
 .fist{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-color: rgb(red, green, blue);
+}
+
+body{
+    background-color:aquamarine;
 }
