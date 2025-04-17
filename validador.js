@@ -1,7 +1,7 @@
 function validarFormulario() {
 
     const nome = document.getElementById('nome').value;
-    
+
     const email = document.getElementById('email').value;
 
     const idade = document.getElementById('idade').value;
@@ -45,6 +45,31 @@ function validarFormulario() {
     if (!nome || !email || !idade || !genero || !comida || !tamanho || !nomePai || !nomeMae || !tel || !senha) {
         alert("Por favor, preencha todos os campos obrigatórios.");
         return false;
+    }
+
+    if (isNaN(idade)) {
+        alert('Digite somente números no campo idade');
+        return;
+    }
+
+    if (isNaN(tamanho)) {
+        alert('Digite somente números no campo tamanho');
+        return;
+    }
+
+    if (isNaN(pe)) {
+        alert('Digite somente números no campo pe');
+        return;
+    }
+
+    if (isNaN(numero)) {
+        alert('Digite somente números no campo numero');
+        return;
+    }
+
+    if (isNaN(geladeira)) {
+        alert('Digite somente números no campo geladeira');
+        return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
