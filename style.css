@@ -1,6 +1,5 @@
 .fist{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    background-image: url(fundo.jpg);
-    background-size: 500px;
+    background-color: rgb(red, green, blue);
 }
